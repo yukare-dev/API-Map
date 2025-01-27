@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  //   background-color: #f1e9db;
+  background-color: #dd403a;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+article {
+  border: groove;
+  border-radius: 20px;
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
+
+  h2,
+  h3 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  img {
+    width: 8vw;
+  }
+}
