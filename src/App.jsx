@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './app.scss'
+import search from './assets/search.png'
+import logo from './assets/logo.png'
 
 export default function App(){
 
@@ -17,8 +19,27 @@ export default function App(){
 
   return(
     <main>
-      <h1>Vai no Atacado</h1>
-      <section>
+      <header>
+        <section>
+          <img src={logo} alt="Imagem de uma logo ilustrando uma loja" />
+          <h1>Vai no Atacado</h1>
+          <nav>
+          <ul>
+            <li>Inicio</li>
+            <li>Carrinho</li>
+            <li>Pedidos</li>
+            <li>Ajuda</li>
+          </ul>
+          </nav>
+          <section className='barraDeBusca'>
+            <input type='search' name='' id='' placeholder='O que você procura?'/>
+            <button>
+              <img src={search} alt="Imagem de uma lupa branca" />
+            </button>
+          </section>
+        </section>
+      </header>
+      <div>
       {
         info.map((item)=>(
           <article>
@@ -29,7 +50,7 @@ export default function App(){
           </article>
         ))
       }
-      </section>
+      </div>
     </main>
   )
 }
