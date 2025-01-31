@@ -3,6 +3,9 @@ import axios from 'axios'
 import './app.scss'
 import search from './assets/search.png'
 import logo from './assets/logo.png'
+import insta from './assets/insta.png'
+import linkedin from './assets/linkedin.png'
+import github from './assets/github.png'
 
 export default function App(){
 
@@ -20,10 +23,10 @@ export default function App(){
   return(
     <main>
       <header>
-        <section>
+        <section className='cabecalho'>
           <img src={logo} alt="Imagem de uma logo ilustrando uma loja" />
           <h1>Vai no Atacado</h1>
-          <nav>
+          <nav className='navegacao'>
           <ul>
             <li>Inicio</li>
             <li>Carrinho</li>
@@ -32,14 +35,14 @@ export default function App(){
           </ul>
           </nav>
           <section className='barraDeBusca'>
-            <input type='search' name='' id='' placeholder='O que você procura?'/>
+            <input type='search' name='' id='' placeholder='Buscar...'/>
             <button>
               <img src={search} alt="Imagem de uma lupa branca" />
             </button>
           </section>
         </section>
       </header>
-      <div>
+      <div className='corpo'>
       {
         info.map((item)=>(
           <article>
@@ -51,6 +54,14 @@ export default function App(){
         ))
       }
       </div>
+    <footer className='rodape'>
+      <p>Desenvolvido apenas para fins educativos.</p>
+      <nav className='navRodape'>
+        <a href=""><img src={insta} alt="Logo do Instagram" /></a>
+        <a href=""><img src={linkedin} alt="Logo do Linkedin" /></a>
+        <a href=""><img src={github} alt="Logo do GitHub" /></a>
+      </nav>
+    </footer>
     </main>
   )
 }

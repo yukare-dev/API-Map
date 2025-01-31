@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", serif;
 }
 
 body {
@@ -13,47 +16,44 @@ body {
   );
 }
 
-section {
+.cabecalho {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 10vh;
   margin-bottom: 50px;
+  box-shadow: 0px 11px 8px -10px #a8bdd4;
+}
 
-  nav {
-    width: 50%;
-    height: 5vh;
+.navegacao {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+
+  ul {
+    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    gap: 60px;
     cursor: pointer;
-
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 60px;
-      font-size: 18px;
-    }
   }
 }
 
 .barraDeBusca {
-  height: 6vh;
   display: flex;
   border-radius: 20px;
   position: relative;
-  margin-top: 50px;
 
   input {
     outline: none;
+    font-style: italic;
     background-color: #fff;
-    border-color: #bed5f0;
+    border: solid 1px #bed5f0;
     height: 4vh;
+    padding-left: 9px;
     border-radius: 20px;
 
     &::placeholder {
       color: #8f8f8f;
-      width: 100%;
     }
   }
 }
@@ -65,31 +65,51 @@ button {
   outline: none;
   position: absolute;
   right: 10px;
+  top: 7px;
 }
 
-div {
+.corpo {
   display: flex;
   flex-wrap: wrap;
-  gap: 120px;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 25px;
 }
 
 article {
-  border: groove;
-  border-radius: 20px;
-  width: 25%;
+  border-radius: 10px;
+  width: 20%;
   height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background-color: #fff;
+  box-shadow: 0px 5px 8px 2px #a8bdd4;
+  text-align: center;
 
   img {
     width: 6vw;
   }
 
   p {
-    text-align: center;
+    font-size: 10px;
+  }
+}
+
+.rodape {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  margin-top: 50px;
+  box-shadow: -10px -11px 8px -10px #a8bdd4;
+
+  .navRodape {
+    display: flex;
+    gap: 15px;
+  }
+
+  img {
+    height: 5vh;
   }
 }
